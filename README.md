@@ -6,4 +6,4 @@
 
 # Study Kokoa Clone 2023
 
-설명을 적어주세요!
+Please write some of explain!
