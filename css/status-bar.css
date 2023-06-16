@@ -1,0 +1,32 @@
+.status-bar {
+	display: flex;
+	/* justify-content: space-between;을 써서 정렬을 맞추는 대신에 컨테이너를 중심에 놓는 방법! 
+		 justify-content값을 center로 두고 자식요소인 status-bar column에 width값을 지정 */
+	justify-content: center;
+	padding: 5px 3px;
+}
+
+.status-bar__column {
+	width: 33%;
+}
+
+.status-bar__column:first-child span {
+	margin-right: 5px;
+}
+
+.status-bar__column:nth-child(2) {
+	display: flex;
+	justify-content: center;
+}
+
+.status-bar__column:last-child {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+/* 가르키는 클래스명을 .fa-battery-full만 지정하여도 상관은 없지만, 앞에.status-bar__column + 공백 뒤에 클래스명을 붙이면 어디의 클래스를 가르키는 것인지 알아보기 쉬우므로 앞에 부모요소를 함께붙임.
+	 여기서는 클래스명 사이에 공백이 들어갔으므로 프로퍼티는 .fa-battery-full에만 적용됨 */
+.status-bar__column .fa-battery-full {
+	margin: 0 5px;
+}

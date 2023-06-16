@@ -1,0 +1,53 @@
+<!-- index.html로 명명하는 이유 : 대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정되어 있기 때문..! -->
+<!-- *****유용한 단축키***** 
+     *** 단축키 사용전, 우측하단에 Language가 HTML로 되어있는지 확인! Prettier 익스텐션도 install되어 있어야함!*** -->
+<!-- script는 항상 마지막(body태그 종료 전)에 있어야함 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- 단축키 link:css -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Self Made Kokoa Talk</title>
+	</head>
+	<body>
+		<div class="status-bar">
+			<div class="status-bar__column">
+				<span>No Service</span>
+				<!-- Wi-Fi Icon -->
+				<i class="fas fa-wifi"></i>
+			</div>
+			<div class="status-bar__column">
+				<span>11:04</span>
+			</div>
+			<div class="status-bar__column">
+				<span>100%</span>
+				<!-- Battery Icon -->
+				<i class="fas fa-battery-full"></i>
+				<!-- Lightning Icon -->
+				<i class="fas fa-bolt"></i>
+			</div>
+		</div>
+
+		<header class="welcome-header">
+			<h1 class="welcome-header__title">Welcome to my Kokoa Talk</h1>
+			<p class="welcome-header__text">
+				If you have a Kokoa Account, log in with your email or phone number.
+			</p>
+		</header>
+
+		<form id="login-form">
+			<input type="text" placeholder="Eamil or phone number" />
+			<input type="password" placeholder="Password" />
+			<input type="submit" value="Log In" />
+			<a href="#">Find Kokoa Account or Password</a>
+		</form>
+
+		<script
+			src="https://kit.fontawesome.com/6478f529f2.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
