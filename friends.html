@@ -1,6 +1,6 @@
 <!-- Ctrl + D + 수정하고 싶은 부분 드래그 
      위의 단축키를 사용하면 수정하고 싶은 부분과 동일한 코드가 전부 선택되므로 수정시 용이함 -->
-
+<!-- 반복되는 부분을 component로 만들어두면 작업하기 매우 쉬워지므로 반복되는 부분은 component로 만들어두는 것을 습관화하자! -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -33,10 +33,67 @@
 			<h1 class="screen-header__title">Friends</h1>
 			<div class="screen-header__icons">
 				<span><i class="fas fa-search fa-lg"></i></span>
-				<span><i class="fas fa-music fa-lg"></i></i></span>
+				<span><i class="fas fa-music fa-lg"></i></span>
 				<span><i class="fas fa-cog fa-lg"></i></span>
 			</div>
 		</header>
+
+		<a id="friends-display-link">
+			<i class="fas fa-info-circle"></i>
+			Friends' Names Display
+			<i class="fas fa-chevron-right fa-xs"></i>
+		</a>
+
+		<main class="friends-screen">
+			<!-- user-component has two column -->
+			<div class="user-component">
+				<!-- ** 단축키 **
+								. + 원하는 클래스명*갯수 + enter
+								.user-components*2 
+								위와 같이 입력하면 아래와 같이 class명이 지정된 태그가 자동으로 작성됨(클래스명 작성시 .(온점)도 붙여야함!) -->
+				<!-- First column -->
+				<div class="user-component__column">
+					<img
+						src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MzFfODEg%2FMDAxNjg1NTA4OTkwNzUz.T_i-lkS0hy_tcrJhzDCOI7fq7iNvq_OnKfPBFeGyiN8g.Was3fiuWZrGQ7DTr4SBJbqNmd9hmKtOrOwxegb5rzl4g.JPEG.theice22%2F%25C4%25F5%25C4%25AB1.jpg&type=sc960_832"
+						class="user-component__avatar user-component__avatar__xl"
+					/>
+					<div class="user-component__text">
+						<h4 class="user-component__title">Myung</h4>
+						<!-- <h6 class="user-component__subtitle">This part is subtitle.</h6> -->
+					</div>
+				</div>
+				<!-- Second column -->
+				<div class="user-component__column"></div>
+			</div>
+			<div class="friends-screen__channel">
+				<div class="friends-screen__channel-header">
+					<span>Channel</span>
+					<i class="fas fa-chevron-up fa-xs"></i>
+				</div>
+				<div class="user-component">
+					<!-- ** 단축키 **
+									. + 원하는 클래스명*갯수 + enter
+									.user-components*2 
+									위와 같이 입력하면 아래와 같이 class명이 지정된 태그가 자동으로 작성됨(클래스명 작성시 .(온점)도 붙여야함!) -->
+					<!-- First column -->
+					<div class="user-component__column">
+						<img
+							src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MzFfODEg%2FMDAxNjg1NTA4OTkwNzUz.T_i-lkS0hy_tcrJhzDCOI7fq7iNvq_OnKfPBFeGyiN8g.Was3fiuWZrGQ7DTr4SBJbqNmd9hmKtOrOwxegb5rzl4g.JPEG.theice22%2F%25C4%25F5%25C4%25AB1.jpg&type=sc960_832"
+							class="user-component__avatar user-component__avatar__sm"
+						/>
+						<div class="user-component__text">
+							<h4 class="user-component__title">Channel</h4>
+							<!-- *** subtitle은 없으므로 생략 *** -->
+						</div>
+					</div>
+					<!-- Second column -->
+					<div class="user-component__column">
+						<span>2</span>
+						<i class="fas fa-chevron-right fa-xs"></i>
+					</div>
+				</div>
+			</div>
+		</main>
 
 		<!-- navigation bar
         검색 엔진을 예로들어, 구글도 navigation을 찾아서 ul내에 있는 li내의 link를 가져오게끔 설정되어 있음.

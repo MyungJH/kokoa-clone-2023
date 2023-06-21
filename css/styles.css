@@ -12,12 +12,16 @@
 
 /* Components */
 @import "components/status-bar.css";
-@import "components/nav-bar.css";
 @import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/nav-bar.css";
+
 /* Screens */
 @import "screens/login.css";
+@import "screens/friends.css";
 
 body {
+	/* body내에 있는 요소의 색의 default값을 #2e363e로  */
+	color: #2e363e;
 	font-family: "Open Sans", sans-serif;
-	/* height: 1000vh; */
 }
