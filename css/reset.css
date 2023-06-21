@@ -128,3 +128,9 @@ table {
 input:focus {
 	outline: none;
 }
+
+a {
+	/* link에  defalut색상을 #2e363e으로 변경 and 밑줄을 none으로 설정 */
+	color: #2e363e;
+	text-decoration: none;
+}

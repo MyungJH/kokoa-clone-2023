@@ -1,3 +1,6 @@
+/* style.css파일에는 font-family, background-color등등 과 같은 모든 스크린에 적용될 수 있는 스타일을 작성
+	 파일의 구성은 본인의 스타일에 맞게 구성하면 됨. */
+
 /* Google Fonts 추가 
 	 원하는 폰트가 있을 경우, 해당하는 만큼만 저장하여 가져오는 것이 좋음. 무작위로 많이 가져오게 되면 웹사이트가 무거워져서 좋지 않음 */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
@@ -6,77 +9,15 @@
 	 메인 css파일에 import시켜주는 방법이 좋음! */
 @import "reset.css";
 @import "variables.css";
-@import "status-bar.css";
+
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+/* Screens */
+@import "screens/login.css";
 
 body {
 	font-family: "Open Sans", sans-serif;
-}
-
-.welcome-header {
-	margin-top: 90px;
-	/* 텍스트를 가운데 정렬시킬 경우, 부모요소를 flex시켜서 자식요소를 정렬시키는 것보다 text-align값을 center로 주면 간단! 
-		 display: flex는 텍스트형식을 제외한 엘리먼트를 인라인형태로 정렬하는 방식(화면구성)
-		 텍스트 엘리먼트는 display형식이 먹히지 않으므로 텍스트 가운데 정렬과 화면 가운데 정렬 두가지를 다 해주어야 함 */
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-weight: 600;
-}
-
-.welcome-header__title {
-	margin-bottom: 20px;
-	font-size: 25px;
-}
-
-.welcome-header__text {
-	width: 60%;
-	opacity: 0.7;
-	margin-bottom: 90px;
-}
-
-#login-form {
-	display: flex;
-	flex-direction: column;
-	margin: 0px 30px;
-}
-
-/* id가 login-form인 엘리먼트의 자식요소 input을 모두 가르킴 */
-#login-form input {
-	border: none;
-	padding: 15px 0px;
-	font-size: 16px;
-	margin-bottom: 25px;
-}
-
-/* input type이 submit이 아닐 때만 설정한 옵션이 적용됨. 즉 text와 password타입에만 옵션 적용 */
-#login-form input:not([type="submit"]) {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-	transition: border-color 0.3s ease-in-out;
-}
-
-#login-form input::placeholder {
-	color: rgba(0, 0, 0, 0.4);
-}
-
-#login-form input:focus {
-	/* variables.css파일에서 설정한 색상 값의 변수를 var를 이용해서 참조 */
-	border-color: var(--yellow);
-}
-
-#login-form input[type="submit"] {
-	background-color: var(--yellow);
-	/* cursor속성값도 여러가지이므로 도큐먼트 참조! */
-	cursor: pointer;
-	padding: 20px 0px;
-	border-radius: 5px;
-}
-
-#login-form a {
-	text-align: center;
-	text-decoration: none;
-	/* inherit(상속) : 부모의 값을 받아 오는 것 
-		 defalut color는 black이므로 검정색으로 표시됨(부모요소에 color가 정의되지 않는 경우) */
-	color: inherit;
-	font-size: 13px;
+	/* height: 1000vh; */
 }

@@ -1,0 +1,79 @@
+<!-- Ctrl + D + 수정하고 싶은 부분 드래그 
+     위의 단축키를 사용하면 수정하고 싶은 부분과 동일한 코드가 전부 선택되므로 수정시 용이함 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- 단축키 link:css -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Friends - Kokoa Clone</title>
+	</head>
+	<body>
+		<div class="status-bar">
+			<div class="status-bar__column">
+				<span>No Service</span>
+				<!-- Wi-Fi Icon -->
+				<i class="fas fa-wifi"></i>
+			</div>
+			<div class="status-bar__column">
+				<span>11:04</span>
+			</div>
+			<div class="status-bar__column">
+				<span>100%</span>
+				<!-- Battery Icon -->
+				<i class="fas fa-battery-full"></i>
+				<!-- Lightning Icon -->
+				<i class="fas fa-bolt"></i>
+			</div>
+		</div>
+
+		<header class="screen-header">
+			<h1 class="screen-header__title">Friends</h1>
+			<div class="screen-header__icons">
+				<span><i class="fas fa-search fa-lg"></i></span>
+				<span><i class="fas fa-music fa-lg"></i></i></span>
+				<span><i class="fas fa-cog fa-lg"></i></span>
+			</div>
+		</header>
+
+		<!-- navigation bar
+        검색 엔진을 예로들어, 구글도 navigation을 찾아서 ul내에 있는 li내의 link를 가져오게끔 설정되어 있음.
+        ** 단축키 **
+        nav>ul>li*4>a
+        위와 같이 입력하면 아래의 구조와 같은 navigation이 자동적으로 만들어짐 -->
+		<!-- link는 기본적으로 blue컬러가 default값 defalut값을 바꾸어 고정하고 싶으면 reset.css파일에 내요을 적용시키면 여러번 작업하지 않아도되므로 간단!-->
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__btn">
+					<a class="nav__link" href="friends.html">
+						<i class="fas fa-user fa-2x"></i>
+					</a>
+				</li>
+				<li class="nav__btn">
+					<a class="nav__link" href="#">
+						<span class="nav__notification">1</span>
+						<i class="far fa-comment fa-2x"></i>
+					</a>
+				</li>
+				<li class="nav__btn">
+					<a class="nav__link" href="#">
+						<i class="fas fa-search fa-2x"></i>
+					</a>
+				</li>
+				<li class="nav__btn">
+					<a class="nav__link" href="#">
+						<span class="nav__ellipsis"></span>
+						<i class="fas fa-ellipsis-h fa-2x"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<script
+			src="https://kit.fontawesome.com/6478f529f2.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

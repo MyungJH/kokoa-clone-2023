@@ -1,0 +1,52 @@
+nav {
+	position: fixed;
+	bottom: 0;
+	/* width를 100%로 주는 이유는 nav태그가 부모태그인 body의 너비를 100% 다 받는 다는 의미.
+     100%가 아닌 50%일 경우에는 부모태그의 너비를 50%만 가지게됨. 즉, 설정한 너비만큼의 값을 부모요소로부터 받아서 자식요소가 사용한다는 의미(인 듯) */
+	width: 100%;
+	background-color: #f9f9fa;
+	padding: 20px 50px;
+	/* box-sizing설정으로 박스사이즈가 커지지 않게 고정시킴 */
+	box-sizing: border-box;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav__link {
+	position: relative;
+}
+
+.nav__notification {
+	background-color: tomato;
+	/* display: block;  <- display: flex를 통해 인라인요소가 블럭요소로 바뀌었으므로, 기존 display: bluck부분은 삭제가능 */
+	height: 25px;
+	width: 25px;
+	/* 사각형을 원으로 만들고 싶을 경우, 사각형 width의 값의 반을 border-radius값으로 쓰면 됨 */
+	border-radius: 12.5px;
+	/* display: flex쓰는 이유 : 원안의 숫자 1을 중앙에 배열하기 위해 justify-content값과 align-items값을 center로 지정. 
+		 element가 없는 경우에는 아래의 .nav__ellipsis에서처럼 display: block으로 지정해도 무방. .(아마..) */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: 600;
+	/* position: absolute는 가장 가까운 relative를 가진 부모 기준으로 움직임 */
+	position: absolute;
+	left: 17px;
+	bottom: 20px;
+}
+
+.nav__ellipsis {
+	background-color: tomato;
+	display: block;
+	height: 7px;
+	width: 7px;
+	border-radius: 3.5px;
+	position: absolute;
+	left: 35px;
+	bottom: 30px;
+}
