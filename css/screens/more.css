@@ -1,0 +1,63 @@
+.more-header .screen-header__ellipsis {
+	left: 120px;
+}
+
+.user-component__subtitle i {
+	color: tomato;
+	margin-left: 5px;
+}
+
+.more-screen .icon-row {
+	margin-top: 35px;
+}
+
+.more-screen .icon-row__icon {
+	height: 100px;
+	width: 100px;
+}
+
+.more-suggestions {
+	margin-top: 50px;
+	border-top: var(--main-border);
+	padding-top: 40px;
+}
+
+.more-suggestions__title {
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+
+.more-suggestions__icons {
+	display: flex;
+}
+
+/* icon-image와 icon-text간에 중앙정렬을 하기위해서는 flexbox속성을 사용하면 간단!
+   flexbox속성을 사용하기 위해 부모요소인 icon에 display값과 flex-directgion값을 지정해줌
+   flex-direction을 column으로 준 이유는 image와 text가 세로(column)방향으로 정렬되기를 원하기 때문. 
+   align-items를 center로 지정하면 가운데정렬 됨! */
+.more-suggestions__icon {
+	margin-right: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.more-suggestion__icon-image {
+	width: 60px;
+	height: 60px;
+	background-color: var(--yellow);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.more-suggestion__icon-image i {
+	font-size: 32px;
+	color: white;
+}
+
+.more-suggestion__icon-text {
+	color: rgba(0, 0, 0, 0.6);
+}

@@ -21,19 +21,6 @@ nav {
 }
 
 .nav__notification {
-	background-color: tomato;
-	/* display: block;  <- display: flex를 통해 인라인요소가 블럭요소로 바뀌었으므로, 기존 display: bluck부분은 삭제가능 */
-	height: 25px;
-	width: 25px;
-	/* 사각형을 원으로 만들고 싶을 경우, 사각형 width의 값의 반을 border-radius값으로 쓰면 됨 */
-	border-radius: 12.5px;
-	/* display: flex쓰는 이유 : 원안의 숫자 1을 중앙에 배열하기 위해 justify-content값과 align-items값을 center로 지정. 
-		 element가 없는 경우에는 아래의 .nav__ellipsis에서처럼 display: block으로 지정해도 무방. .(아마..) */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	font-weight: 600;
 	/* position: absolute는 가장 가까운 relative를 가진 부모 기준으로 움직임 */
 	position: absolute;
 	left: 17px;

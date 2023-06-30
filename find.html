@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- 단축키 link:css -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Find - Kokoa Clone</title>
+	</head>
+	<body>
+		<div class="status-bar">
+			<div class="status-bar__column">
+				<span>No Service</span>
+				<!-- Wi-Fi Icon -->
+				<i class="fas fa-wifi"></i>
+			</div>
+			<div class="status-bar__column">
+				<span>11:04</span>
+			</div>
+			<div class="status-bar__column">
+				<span>100%</span>
+				<!-- Battery Icon -->
+				<i class="fas fa-battery-full"></i>
+				<!-- Lightning Icon -->
+				<i class="fas fa-bolt"></i>
+			</div>
+		</div>
+
+		<header class="screen-header">
+			<h1 class="screen-header__title">Find</h1>
+			<div class="screen-header__icons">
+				<span><i class="fas fa-search fa-lg"></i></span>
+				<span>
+					<a href="setting.html"><i class="fas fa-cog fa-lg"></i></a>
+				</span>
+				<span class="screen-header__ellipsis"></span>
+			</div>
+		</header>
+
+		<main class="main-screen">
+			<div class="icon-row">
+				<div class="icon-row__icon">
+					<i class="fas fa-qrcode"></i>
+					<span>QR Code</span>
+				</div>
+				<div class="icon-row__icon">
+					<i class="far fa-address-book"></i>
+					<span>Add by Contacts</span>
+				</div>
+				<div class="icon-row__icon">
+					<i class="fas fa-fingerprint"></i>
+					<span>Add by ID</span>
+				</div>
+				<div class="icon-row__icon">
+					<i class="far fa-envelope"></i>
+					<span>Invite</span>
+				</div>
+			</div>
+			<div class="recommanded-friends">
+				<h6 class="recommanded-friends__title">Recommanded Friends</h6>
+				<span>You have no recommanded friends.</span>
+			</div>
+			<div class="open-chat">
+				<div class="open-chat__header">
+					<h4 class="open-chat__title">Open Chat</h4>
+					<span>
+						Go to Openchat Home<i class="fas fa-chevron-right fa-xs"></i>
+					</span>
+				</div>
+				<div class="open-post">
+					<div class="open-post__column">
+						<h5 class="open-post__title">#BTS</h5>
+						<!-- 대문자는 디자인적 요소. 
+                 디자인(보여지는 것) 때문에 대문자가 필요할 경우에는 html코드에는 소문자로 작성 후, CSS를 이용해서 대문자로 바꿔주면 됨. -->
+						<h6 class="open-post__hashtags">#bts#army#friends</h6>
+						<div class="open-post__members">
+							<img
+								src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MzFfODEg%2FMDAxNjg1NTA4OTkwNzUz.T_i-lkS0hy_tcrJhzDCOI7fq7iNvq_OnKfPBFeGyiN8g.Was3fiuWZrGQ7DTr4SBJbqNmd9hmKtOrOwxegb5rzl4g.JPEG.theice22%2F%25C4%25F5%25C4%25AB1.jpg&type=sc960_832"
+							/>
+							<span class="open-post__member-count">802 members</span>
+							<div class="divider"></div>
+							<span class="open-post__member-status">Active</span>
+						</div>
+					</div>
+					<div class="open-post__column">
+						<div class="open-post__photo">
+							<img
+								src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MzFfODEg%2FMDAxNjg1NTA4OTkwNzUz.T_i-lkS0hy_tcrJhzDCOI7fq7iNvq_OnKfPBFeGyiN8g.Was3fiuWZrGQ7DTr4SBJbqNmd9hmKtOrOwxegb5rzl4g.JPEG.theice22%2F%25C4%25F5%25C4%25AB1.jpg&type=sc960_832"
+							/>
+							<div class="open-post__heart-count">
+								<i class="fas fa-heart fa-xs"></i>
+								<span>326</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- navigation bar
+        검색 엔진을 예로들어, 구글도 navigation을 찾아서 ul내에 있는 li내의 link를 가져오게끔 설정되어 있음.
+        ** 단축키 **
+        nav>ul>li*4>a
+        위와 같이 입력하면 아래의 구조와 같은 navigation이 자동적으로 만들어짐 -->
+		<!-- link는 기본적으로 blue컬러가 default값 defalut값을 바꾸어 고정하고 싶으면 reset.css파일에 내요을 적용시키면 여러번 작업하지 않아도되므로 간단!-->
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__btn">
+					<a class="nav__link" href="friends.html">
+						<i class="far fa-user fa-2x"></i>
+					</a>
+				</li>
+				<li class="nav__btn">
+					<a class="nav__link" href="chats.html">
+						<span class="nav__notification badge">1</span>
+						<i class="far fa-comment fa-2x"></i>
+					</a>
+				</li>
+				<li class="nav__btn">
+					<a class="nav__link" href="find.html">
+						<i class="fas fa-search fa-2x"></i>
+					</a>
+				</li>
+				<li class="nav__btn">
+					<a class="nav__link" href="more.html">
+						<span class="nav__ellipsis"></span>
+						<i class="fas fa-ellipsis-h fa-2x"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<script
+			src="https://kit.fontawesome.com/6478f529f2.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
