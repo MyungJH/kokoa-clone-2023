@@ -1,0 +1,218 @@
+#chat-screen {
+	background-color: #a1b9c8;
+	/* 스크롤하기 위해 임의로 height값을 매우 길게 수정. */
+	height: 500vh;
+}
+
+/* status-bar와 header를 고정하는 코드 ↓ */
+/* #chat-screen .alt-header,
+#chat-screen .status-bar {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	background-color: #a1b9c8;
+	box-sizing: border-box;
+} */
+
+#chat-screen .alt-header {
+	top: 10px;
+	z-index: 1;
+}
+
+@keyframes fadeIn {
+	from {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+	to {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.main-chat {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	animation: fadeIn 0.8s linear;
+}
+
+.chat__timestamp {
+	color: white;
+	background-color: #92a4b2;
+	padding: 10px 15px;
+	font-size: 15px;
+	border-radius: 30px;
+	margin-bottom: 30px;
+}
+
+.message-row {
+	/* width를 100%로 설정하는 이유
+     -> width를 설정하지 않으면, 컨텐츠 크기만큼 적용이 되어서 flex박스에 끌려다니게됨.
+        width를 100%로 설정하면 화면 폭만큼의 크기를 갖고, message-row자체는 flex박스의 영향을 받지만
+        내부컨텐츠인 자식요소들은 직접적인 영향을 받지 않기 때문에 자식요소를 제외하고 무엇인가 설정하고 싶을 경우(?) width값을 100%로 주고 사용하면 될듯?! */
+	width: 100%;
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.message-row img {
+	width: 50px;
+	height: 50px;
+	border-radius: 17px;
+	margin-right: 13px;
+}
+
+.message__info {
+	display: flex;
+	align-items: flex-end;
+}
+
+.message__author {
+	opacity: 0.8;
+	font-size: 15px;
+	/* span은 inline요소이므로 block을 설정해 주어야 margin값이 적용됨. */
+	display: block;
+	margin-bottom: 8px;
+}
+
+.message__bubble {
+	background-color: white;
+	padding: 13px;
+	font-size: 20px;
+	border-radius: 15px;
+	/* 아래와 같이, 사각형의 각 모서리 중에서 원하는 곳을 지정해서 값을 주는 것도 가능 */
+	border-top-left-radius: 0px;
+	margin-right: 5px;
+}
+
+.message__time {
+	opacity: 0.8;
+	font-size: 14px;
+}
+
+.message-row--own {
+	justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+	background-color: var(--yellow);
+	border-top-right-radius: 0px;
+	border-top-left-radius: 15px;
+	margin-right: 0px;
+	margin-left: 5px;
+}
+
+/* 방법1 :  flex의 자식요소에 order속성 지정
+.message-row--own .message__bubble {
+	order: 1;
+} */
+
+/* 방법2 : flex-direction속성을 이용 */
+.message-row--own .message__info {
+	flex-direction: row-reverse;
+}
+
+.reply {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 25px;
+	/* box-sizing을 border-box로 지정하므로써 박스 밖으로 탈출한 요소를 박스 안에 위치하게 만듬. */
+	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
+}
+
+.reply .reply__column:first-child {
+	width: 10%;
+}
+
+.reply .reply__column:last-child {
+	width: 90%;
+	/* 아이콘과 버튼을 absolute로 움직이기 위해, 부모요소인 .reply__column:last-child에 relative선언. */
+	position: relative;
+}
+
+.reply i {
+	opacity: 0.5;
+}
+
+/* input에 width를 적용하기 위해서는 input이 속해있는 column에도 width가 있어야하으로,
+   위와같이 reply__column에 width를 지정한 후 아래와 같이 width를 지정하면 됨. */
+.reply input {
+	height: 30px;
+	width: 100%;
+	border: var(--main-border);
+	border-radius: 20px;
+	/* focus within으로 transform을 설정하고 싶을 경우, 반드시 아래와 같이 기본 input에 transition값이 설정되어있어야함
+		 transition이 설정되어 있지 않으면, 제대로 동작하지 않음.  */
+	transition: all 0.3s ease-in-out;
+}
+
+.reply input::placeholder {
+	padding: 15px 20px;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+	position: absolute;
+	right: -4px;
+	top: 2px;
+}
+
+.reply__column:last-child > i {
+	right: 40px;
+	top: 9px;
+}
+
+.reply__column button {
+	background-color: var(--yellow);
+	border: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.reply__column button i {
+	opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+	outline: none;
+}
+
+/* .reply:focus-within의 뜻
+		reply내부에 어떤 element가 focus되어 있다면? 이라는 뜻  */
+/* .reply:focus-within .reply__column:first-child { */
+/* display: none; */
+/* display: none; 대신에 opacity와 visibility값을 설정해도 무관 OK! */
+/* opacity: 0; */
+/* visibility: hidden; */
+/* } */
+
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button {
+	transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+	opacity: 0;
+}
+
+.reply:focus-within input {
+	width: 98vw;
+	transform: translateX(-11%) translateY(-80px);
+}
+
+.reply:focus-within {
+	transform: translateY(80px);
+}

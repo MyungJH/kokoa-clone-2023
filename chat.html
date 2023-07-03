@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- 단축키 link:css -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Chat Page - Kokoa Clone</title>
+	</head>
+	<body id="chat-screen">
+		<div class="status-bar">
+			<div class="status-bar__column">
+				<span>No Service</span>
+				<!-- Wi-Fi Icon -->
+				<i class="fas fa-wifi"></i>
+			</div>
+			<div class="status-bar__column">
+				<span>11:04</span>
+			</div>
+			<div class="status-bar__column">
+				<span>100%</span>
+				<!-- Battery Icon -->
+				<i class="fas fa-battery-full"></i>
+				<!-- Lightning Icon -->
+				<i class="fas fa-bolt"></i>
+			</div>
+		</div>
+
+		<header class="alt-header">
+			<div class="alt-header__column">
+				<a href="chats.html">
+					<i class="fas fa-angle-left fa-3x"></i>
+				</a>
+			</div>
+			<div class="alt-header__column">
+				<h1 class="alt-header__title">Kokoa Talk</h1>
+			</div>
+			<div class="alt-header__column">
+				<span><i class="fas fa-search fa-lg fa-2x"></i></span>
+				<span><i class="fas fa-bars fa-2x"></i></span>
+			</div>
+		</header>
+
+		<!-- main-screen클래스에는 main태그의 padding값을 지정, main-chat클래스에는 다른 값을 추가로 지정 -->
+		<main class="main-screen main-chat">
+			<div class="chat__timestamp">Monday, July 3, 2023</div>
+
+			<div class="message-row">
+				<img
+					src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MzFfODEg%2FMDAxNjg1NTA4OTkwNzUz.T_i-lkS0hy_tcrJhzDCOI7fq7iNvq_OnKfPBFeGyiN8g.Was3fiuWZrGQ7DTr4SBJbqNmd9hmKtOrOwxegb5rzl4g.JPEG.theice22%2F%25C4%25F5%25C4%25AB1.jpg&type=sc960_832"
+				/>
+				<div class="message-row__content">
+					<span class="message__author">Kokoa Talk</span>
+					<div class="message__info">
+						<span class="message__bubble">Hi!</span>
+						<span class="message__time">13:47</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="message-row message-row--own">
+				<div class="message-row__content">
+					<div class="message__info">
+						<span class="message__bubble">What's up?!</span>
+						<span class="message__time">14:24</span>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<form class="reply">
+			<div class="reply__column">
+				<i class="far fa-plus-square fa-lg"></i>
+			</div>
+			<div class="reply__column">
+				<input type="text" placeholder="Write a message." />
+				<!-- 바로 아래에 있는 아이콘과 버튼은 input 위에 위치하는 것임(CSS를 이용하여 위에 위치할 수 있도록 설정해야함.)
+             absolute를 이용해서 요소를 움직이므로 부모요소인 reply__column:last-child는 relative값을 가지고 있어야함. -->
+				<i class="far fa-smile fa-lg"></i>
+				<button>
+					<i class="fas fa-arrow-up fa-lg"></i>
+				</button>
+			</div>
+		</form>
+
+		<div id="no-mobile">
+			<span>Your screen is too big :-(</span>
+		</div>
+
+		<script
+			src="https://kit.fontawesome.com/6478f529f2.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

@@ -1,6 +1,6 @@
 .status-bar {
-	/* 상단 status-bar를 fix하고 싶을 경우 아래 코드 추가 
-	position: fixed;
+	/* 상단 status-bar를 fix하고 싶을 경우 아래 코드 추가  */
+	/* position: fixed;
 	top: 0;
 	width: 100%;
 	box-sizing: border-box; */
@@ -8,7 +8,8 @@
 	/* justify-content: space-between;을 써서 정렬을 맞추는 대신에 컨테이너를 중심에 놓는 방법! 
 		 justify-content값을 center로 두고 자식요소인 status-bar column에 width값을 지정 */
 	justify-content: center;
-	padding: 5px 3px;
+	/* chat페이지에서, 스크롤하면 timestap가 status-bar와 header사이로 보여서 padding-bottom값을 늘리기위해 padding의 상하 값을 늘려주었더니 해결완료! */
+	padding: 7px 3px;
 }
 
 .status-bar__column {

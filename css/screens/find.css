@@ -104,3 +104,25 @@
 .open-post__heart-count span {
 	margin-left: 5px;
 }
+
+@keyframes heartBeat {
+	0% {
+		color: white;
+		transform: none;
+	}
+	50% {
+		color: tomato;
+		transform: scale(2);
+	}
+	100% {
+		color: white;
+		transform: none;
+	}
+}
+
+.open-post__heart-count:hover i {
+	/* will-change : 브라우저에게 어떤 것이 변할 것인지 예고해주는 것. 
+		 will-change 속성을 사용하면 애니메이션이 부드럽게 동작할 수 있게 함. 애니메이션을 지정했을 때 떨림이 있거나 제대로 동작이 이루어지지 않을 경우 사용해서 좀 더 부드러운(?) 애니메이션을 만드는 것이 가능 */
+	will-change: transform;
+	animation: heartBeat 1s linear infinite;
+}
